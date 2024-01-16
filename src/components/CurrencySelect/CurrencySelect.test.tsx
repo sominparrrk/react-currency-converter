@@ -11,17 +11,17 @@ describe('CurrencySelect component', () => {
   ];
 
   it('renders with placeholder', () => {
-    render(<CurrencySelect options={mockOptions} value="" placeholder="Select the currency" />);
+    render(<CurrencySelect options={mockOptions} value='' placeholder='Select the currency' />);
     expect(screen.getByText('Select the currency')).toBeInTheDocument();
   });
 
   it('renders with value if there is a value', () => {
-    const { container } = render(<CurrencySelect options={mockOptions} value="EUR" />);
+    const { container } = render(<CurrencySelect options={mockOptions} value='EUR' />);
     expect(container.querySelector('option:checked')).toHaveValue('EUR');
   });
 
   it('renders options correctly', () => {
-    render(<CurrencySelect options={mockOptions} value="" />);
+    render(<CurrencySelect options={mockOptions} value='' />);
     mockOptions.forEach((option) => {
       expect(screen.getByText(`${option.code} - ${option.name}`)).toBeInTheDocument();
     });
@@ -29,7 +29,7 @@ describe('CurrencySelect component', () => {
 
   it('calls onChange when option is selected', () => {
     const mockOnChange = jest.fn();
-    render(<CurrencySelect options={mockOptions} value="" onChange={mockOnChange} />);
+    render(<CurrencySelect options={mockOptions} value='' onChange={mockOnChange} />);
     fireEvent.change(screen.getByRole('combobox'), { target: { value: 'USD' } });
     expect(mockOnChange).toHaveBeenCalled();
   });

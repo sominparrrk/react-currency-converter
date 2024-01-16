@@ -1,6 +1,6 @@
-import "styled-components";
+import 'styled-components';
 
-declare module "styled-components" {
+declare module 'styled-components' {
   export interface DefaultTheme {
     color: {
       black: string;
@@ -16,7 +16,7 @@ declare module "styled-components" {
         md: string;
         lg: string;
         xl: string;
-      }
+      };
     };
     spacing: {
       xs: string;

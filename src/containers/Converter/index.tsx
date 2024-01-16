@@ -11,9 +11,7 @@ export const Converter = () => {
   const [toCurrency, setToCurrency] = useState('');
   const [fromAmount, setFromAmount] = useState(1);
   const [toAmount, setToAmount] = useState<number | null>(null);
-  const [exchangeRate, setExchangeRate] = useState<{ [key: string]: number }>(
-    {}
-  );
+  const [exchangeRate, setExchangeRate] = useState<{ [key: string]: number }>({});
   const [isSameCurrencyError, setIsSameCurrencyError] = useState(false);
   const [conversionHistory, setConversionHistory] = useState<string[]>([]);
 
@@ -39,10 +37,7 @@ export const Converter = () => {
   useEffect(() => {
     !isSameCurrencyError &&
       toCurrency &&
-      setConversionHistory([
-        `${fromAmount} ${fromCurrency} 👉 ${toCurrency}`,
-        ...conversionHistory,
-      ]);
+      setConversionHistory([`${fromAmount} ${fromCurrency} 👉 ${toCurrency}`, ...conversionHistory]);
   }, [toAmount]);
 
   useEffect(() => {
@@ -50,17 +45,13 @@ export const Converter = () => {
   }, [fromCurrency, fromAmount, toCurrency, exchangeRate]);
 
   useEffect(() => {
-    toCurrency !== '' &&
-      localStorage.setItem('history', JSON.stringify(conversionHistory));
+    toCurrency !== '' && localStorage.setItem('history', JSON.stringify(conversionHistory));
   }, [conversionHistory]);
 
   return (
     <Container>
       <FormWrapper>
-        <Input
-          value={fromAmount}
-          onChange={(e) => setFromAmount(Number(e.target.value))}
-        />
+        <Input value={fromAmount} onChange={(e) => setFromAmount(Number(e.target.value))} />
         <CurrencySelect
           options={supportedCurrencies}
           value={fromCurrency}
@@ -76,17 +67,13 @@ export const Converter = () => {
         )}
         <CurrencySelect
           options={supportedCurrencies}
-          placeholder="Select the currency"
+          placeholder='Select the currency'
           value={toCurrency}
           onChange={(e) => setToCurrency(e.target.value)}
         />
       </FormWrapper>
-      {isSameCurrencyError && (
-        <Text $errorMsg={true}>Please select different currency</Text>
-      )}
-      {conversionHistory.length > 0 && (
-        <HistoryList history={conversionHistory} />
-      )}
+      {isSameCurrencyError && <Text $errorMsg={true}>Please select different currency</Text>}
+      {conversionHistory.length > 0 && <HistoryList history={conversionHistory} />}
       <ClearHistory
         onClick={() => {
           setConversionHistory([]);

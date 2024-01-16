@@ -8,15 +8,10 @@ type CurrencySelectProps = {
   onChange?: (event: React.ChangeEvent<HTMLSelectElement>) => void;
 };
 
-export const CurrencySelect: React.FC<CurrencySelectProps> = ({
-  placeholder,
-  value,
-  onChange,
-  options,
-}) => {
+export const CurrencySelect: React.FC<CurrencySelectProps> = ({ placeholder, value, onChange, options }) => {
   return (
     <StyledSelect value={value} onChange={onChange}>
-      {placeholder && <option value="">{placeholder}</option>}
+      {placeholder && <option value=''>{placeholder}</option>}
       {options.map((option: Currency, index: number) => (
         <option key={index} value={option.code}>
           {option.code} - {option.name}
