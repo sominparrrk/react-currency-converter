@@ -15,6 +15,8 @@
 - Save search history using localStorage
 - Clear search history
 
+![demo](https://github.com/sominparrrk/react-currency-converter/assets/48925632/7941b59f-99e8-4ea9-bfbd-c894645715b5)
+
 ### Tech stacks & Library
 
 - React (TypeScript)
