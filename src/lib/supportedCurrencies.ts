@@ -1,4 +1,4 @@
-import { Currency } from "../types/currency";
+import { Currency } from '../types/currency';
 
 export const supportedCurrencies: Currency[] = [
   { code: 'GBP', name: 'Pound Sterling', country: 'United Kingdom' },
@@ -148,7 +148,7 @@ export const supportedCurrencies: Currency[] = [
   { code: 'UAH', name: 'Ukrainian Hryvnia', country: 'Ukraine' },
   { code: 'UGX', name: 'Ugandan Shilling', country: 'Uganda' },
   { code: 'UYU', name: 'Uruguayan Peso', country: 'Uruguay' },
-  { code: 'UZS', name: 'Uzbekistani So\'m', country: 'Uzbekistan' },
+  { code: 'UZS', name: "Uzbekistani So'm", country: 'Uzbekistan' },
   { code: 'VES', name: 'Venezuelan Bolívar Soberano', country: 'Venezuela' },
   { code: 'VND', name: 'Vietnamese Đồng', country: 'Vietnam' },
   { code: 'VUV', name: 'Vanuatu Vatu', country: 'Vanuatu' },
@@ -157,9 +157,9 @@ export const supportedCurrencies: Currency[] = [
   { code: 'XCD', name: 'East Caribbean Dollar', country: 'Organisation of Eastern Caribbean States' },
   { code: 'XDR', name: 'Special Drawing Rights', country: 'International Monetary Fund' },
   { code: 'XOF', name: 'West African CFA franc', country: 'CFA' },
-  { code: 'XPF', name: 'CFP Franc', country: 'Collectivités d\'Outre-Mer' },
+  { code: 'XPF', name: 'CFP Franc', country: "Collectivités d'Outre-Mer" },
   { code: 'YER', name: 'Yemeni Rial', country: 'Yemen' },
   { code: 'ZAR', name: 'South African Rand', country: 'South Africa' },
   { code: 'ZMW', name: 'Zambian Kwacha', country: 'Zambia' },
-  { code: 'ZWL', name: 'Zimbabwean Dollar', country: 'Zimbabwe' }
+  { code: 'ZWL', name: 'Zimbabwean Dollar', country: 'Zimbabwe' },
 ];

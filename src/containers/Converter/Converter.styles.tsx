@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
@@ -17,8 +17,10 @@ export const Text = styled.p<{ $errorMsg?: boolean }>`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: ${props => props.$errorMsg ? props.theme.font.size.sm : props.theme.font.size.md };
-  color: ${props => props.$errorMsg ? props.theme.color.error : props.theme.color.black };
+  font-size: ${(props) =>
+    props.$errorMsg ? props.theme.font.size.sm : props.theme.font.size.md};
+  color: ${(props) =>
+    props.$errorMsg ? props.theme.color.error : props.theme.color.black};
 `;
 
 export const ClearHistory = styled.button`

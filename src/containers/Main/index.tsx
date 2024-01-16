@@ -1,5 +1,5 @@
-import { Converter } from "../Converter";
-import { Container, Title, Wrapper } from "./Main.styles";
+import { Converter } from '../Converter';
+import { Container, Title, Wrapper } from './Main.styles';
 
 export const Main = () => {
   return (

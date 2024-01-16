@@ -1,4 +1,4 @@
-import { Container, ListContainer } from "./HistoryList";
+import { Container, ListContainer } from './HistoryList';
 
 type HistoryListProps = {
   history: string[];

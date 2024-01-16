@@ -10,6 +10,6 @@ const CurrencyConversionApp = () => {
       <Main />
     </ThemeProvider>
   );
-}
+};
 
 export default CurrencyConversionApp;
