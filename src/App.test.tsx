@@ -1,8 +1,15 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { screen } from '@testing-library/react';
+import { render } from './test-utils';
+import CurrencyConversionApp from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+jest.mock('./containers/Main', () => ({
+  Main: () => <div>Main</div>,
+}));
+
+describe('CurrencyConversionApp Component', () => {
+  test('renders CurrencyConversionApp component', () => {
+    render(<CurrencyConversionApp />);
+
+    expect(screen.getByText('Main')).toBeInTheDocument();
+  });
 });
