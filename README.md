@@ -7,6 +7,7 @@
 1. Clone the repository
 2. Run `yarn` to install dependencies
 3. Run `yarn start` to test in browser
+4. Run `yarn test` to run a unit test
 
 ### Feature
 
